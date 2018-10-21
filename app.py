@@ -9,7 +9,8 @@ def index():
 @app.route('/senhas/<num>')
 def numero(num):
     prox = int(num) + 1
-    return render_template('senhas.html', prox=str(prox), num=num)
+    dict = {'prox':prox, 'num':num}
+    return render_template('senhas.html', numeros = dict)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
