@@ -8,7 +8,7 @@ def index():
 
 @app.route('/senhas/<num>')
 def numero(num):
-    next = num + 1
+    next = num+1
     return render_template('senhas.html', num=num, next=next)
 
 if __name__ == '__main__':
