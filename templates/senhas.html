@@ -3,6 +3,17 @@
 <link rel="stylesheet" href='/static/style.css' />
 </head>
 <body>   
-<h1><a href='/senhas/{{ numeros.prox }}'>Número: {{ numeros.num }}, próximo: {{ numeros.prox }}</a></h1>
+    <!--
+        Variáveis actuais
+        Número actual: {{ numeros.num }}
+        Próximo Número: {{ numeros.prox }}
+     -->
+     <div class="outer">
+        <div class="middle">
+          <div class="inner">
+            <h1><a href='/senhas/{{ numeros.prox }}'>Tirar uma senha</a></h1>            
+          </div>
+        </div>
+      </div>
 </body>
 </html>
