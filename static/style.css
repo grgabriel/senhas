@@ -4,23 +4,21 @@ body {
     color: black;
 }
 
-.block{
-    height: 300px;
-    text-align: center;
-}
-
-.block::before{
-    content: '';
-    display: inline-block;
+.outer {
+    display: table;
+    position: absolute;
     height: 100%;
+    width: 100%;
+  }
+  
+  .middle {
+    display: table-cell;
     vertical-align: middle;
-    margin-right: -0.25em;
-}
-
-.centered{
-    display: inline-block;
-    vertical-align: middle;
-    width: 300px;
-    padding: 10px 15px;
-    border: #a0a0a0 solid 1px;
-}
+  }
+  
+  .inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    /*whatever width you want*/
+  }

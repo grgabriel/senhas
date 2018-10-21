@@ -8,9 +8,11 @@
         Número actual: {{ numeros.num }}
         Próximo Número: {{ numeros.prox }}
      -->
-     <div class="block">
-        <div class="centered">          
-            <h1><a href='/senhas/{{ numeros.prox }}'>Tirar uma senha</a></h1>                      
+     <div class="outer">
+        <div class="middle">          
+            <div class="inner">
+                    <h1><a href='/senhas/{{ numeros.prox }}'>Tirar uma senha</a></h1>                      
+            </div>            
         </div>
       </div>
 </body>
