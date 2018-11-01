@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-from win_funcs import imprimir
+#from win_funcs import imprimir
+from lin_funcs import imprimir
 
 app = Flask(__name__)
 
@@ -10,7 +11,7 @@ def index():
 @app.route('/senhas/<num>')
 def numero(num):
     if not int(num) == 0:
-        imprimir(num)         
+        imprimir(num)
 
     prox = int(num) + 1
     dict = {'prox':prox, 'num':num}
