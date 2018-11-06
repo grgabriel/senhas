@@ -9,10 +9,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/senhas/<num>')
-def numero(num):
-    if not int(num) == 0:
-        imprimir(num)
-
+def numero(num):    
     if num == 99:
         prox = 0
     else:
@@ -20,6 +17,19 @@ def numero(num):
 
     dict = {'prox':prox, 'num':num}
     return render_template('senhas.html', numeros = dict)
+
+@app.route('/senhas/print/<num>')
+def imprime(num):
+    if not int(num) == 0:
+        imprimir(num)
+    
+    if num == 99:
+        prox = 0
+    else:
+        prox = int(num) + 1
+
+    dict = {'prox':prox, 'num':num}
+    return render_template('imprimir.html', numeros = dict)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
