@@ -10,11 +10,11 @@ def index():
 
 @app.route('/senhas/<num>')
 def numero(num):    
-    if num == 99:
+    if (int)num == 99:
         prox = 0
     else:
         prox = int(num) + 1
-    if num == 100:
+    if (int)num == 100:
         num = 0
 
     dict = {'prox':prox, 'num':num}
@@ -25,11 +25,11 @@ def imprime(num):
     if not int(num) == 0:
         imprimir(num)
     
-    if num == 99:
+    if (int)num == 99:
         prox = 0
     else:
         prox = int(num) + 1
-    if num == 100:
+    if (int)num == 100:
         num = 0
     dict = {'prox':prox, 'num':num}
     return render_template('imprimir.html', numeros = dict)
