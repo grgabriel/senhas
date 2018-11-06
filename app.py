@@ -13,7 +13,11 @@ def numero(num):
     if not int(num) == 0:
         imprimir(num)
 
-    prox = int(num) + 1
+    if num == 99:
+        prox = 0
+    else:
+        prox = int(num) + 1
+
     dict = {'prox':prox, 'num':num}
     return render_template('senhas.html', numeros = dict)
 
