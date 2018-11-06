@@ -11,7 +11,7 @@ def index():
 @app.route('/senhas/<num>')
 def numero(num):    
     if int(num) == 99:
-        prox = 0
+        prox = 1
     else:
         prox = int(num) + 1
     if int(num) == 100:
@@ -26,7 +26,7 @@ def imprime(num):
         imprimir(num)
     
     if int(num) == 99:
-        prox = 0
+        prox = 1
     else:
         prox = int(num) + 1
     if int(num) == 100:
