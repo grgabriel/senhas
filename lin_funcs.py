@@ -4,7 +4,7 @@ def imprimir(n):
     #lpr = subprocess.Popen("/usr/bin/lpr", stdin=subprocess.PIPE)
     #lpr.stdin.write("10".encode('utf-8'))
     #lpr.terminate()
-    subprocess.run(["lp", "-o fit-to-page", "-o orientation-requested=1", "-d TD-4100N", "static/{}.png".format(n)])
+    subprocess.run(["lp", "-o fit-to-page", "-o orientation-requested=1", "-d TD-4100N", "./static/{}.png".format(n)])
  
 #from escpos.connections import getUSBPrinter
 #
