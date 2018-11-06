@@ -2,6 +2,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     background: #f1f1f1;
     color: black;
+    text-align: center;
 }
 
 .outer {
@@ -19,6 +20,6 @@ body {
   .inner {
     margin-left: auto;
     margin-right: auto;
-    width: 1280px;
+    width: 1200px;
     /*whatever width you want*/
   }
