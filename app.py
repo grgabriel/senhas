@@ -14,6 +14,8 @@ def numero(num):
         prox = 0
     else:
         prox = int(num) + 1
+    if num == 100:
+        num = 0
 
     dict = {'prox':prox, 'num':num}
     return render_template('senhas.html', numeros = dict)
@@ -27,7 +29,8 @@ def imprime(num):
         prox = 0
     else:
         prox = int(num) + 1
-
+    if num == 100:
+        num = 0
     dict = {'prox':prox, 'num':num}
     return render_template('imprimir.html', numeros = dict)
 
