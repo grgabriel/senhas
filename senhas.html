@@ -1,0 +1,27 @@
+<html>
+<head>
+<link rel="stylesheet" href='/static/style.css' />
+<script> 
+    function clickAndDisable(link) {
+      // disable subsequent clicks
+      link.onclick = function(event) {
+         event.preventDefault();
+      }
+    }   
+ </script>
+</head>
+<body>   
+    <!--
+        Variáveis actuais
+        Número actual: {{ numeros.num }}
+        Próximo Número: {{ numeros.prox }}
+     -->
+     <div class="outer">
+        <div class="middle">          
+            <div class="inner">
+                    <h1><a href='/senhas/print/{{ numeros.prox }}' onclick="clickAndDisable(this);">Tirar uma senha</a></h1>                      
+            </div>            
+        </div>
+      </div>
+</body>
+</html>
