@@ -1,13 +1,14 @@
 from flask import Flask, render_template
-#from win_funcs import imprimir
 from lin_funcs import imprimir
 
 app = Flask(__name__)
 
+# Main index, serve a basic page to set number to 0
 @app.route('/')
 def index():
     return render_template('index.html')
 
+# Serve the "your ticket" page, ready to print number 'num'
 @app.route('/senhas/<num>')
 def numero(num):    
     if int(num) == 99:
@@ -20,6 +21,7 @@ def numero(num):
     dict = {'prox':prox, 'num':num}
     return render_template('senhas.html', numeros = dict)
 
+# Print number 'num' then open "your ticket" page with next number
 @app.route('/senhas/print/<num>')
 def imprime(num):
     if not int(num) == 0:
